@@ -65,6 +65,12 @@ services:
       - config.monitoring
     restart: always
 
+  zookeeper:
+    image: jplock/zookeeper:latest
+    ports:
+      - 2181:2181
+    restart: always
+
 volumes:
   dbdata: {}
   prometheus_data: {}
